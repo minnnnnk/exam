@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	
+	<h2>배열</h2>
+</body>
+
+<script type="text/javascript">
+	var array = [];
+	
+	array[0] = 1;
+	array[1] = 1.5;
+	array[2] = "안녕";
+	array[3] = "hello!";
+	array[4] = 3>5;
+	
+	console.log(array[0]);
+	console.log(array[1]);
+	console.log(array[2]);
+	console.log(array[3]);
+	console.log(array[4]);
+	
+	console.log(array);
+	
+	console.log("-------------------------");
+	for(var i = 0; i<array.length; i++) {
+		var data = array[i]
+		console.log(data);
+	}
+
+	console.log("---------------------------");
+	
+	
+	
+	var personVo01 = {
+			name:"반말하지말자" 
+			,hp:"010-1234-1234"
+			,company:"070-1234-1234"
+	};
+	
+	console.log(personVo01);
+	var personVo02 = {
+			name:"어허" 
+			,hp:"010-1234-1234"
+	};
+	
+	personVo02.company ="02-0123-1242";
+	personVo02.age = 123;
+	
+	console.log(personVo02);
+	
+	var personVo03 = {};
+	personVo03.name = "비오지마라";
+	personVo03.hp = "012312-1203123-";
+	personVo03.company ="a1klajsdkl.askdfljsdkl";
+	
+	console.log(personVo03);
+	
+	
+	var array2 = [273, "문자열",  5>3,  plus(3,5), function(){return 5+100}, [274,103]];
+	
+	console.log(array2[0]);
+	console.log(array2[1]);
+	console.log(array2[2]);
+	console.log(array2[3]);
+	console.log(array2[4]())
+	console.log(array2[5])
+	
+	
+	function plus(a,b) {
+		var sum = a+b;
+		return sum;
+	}
+	
+	
+</script>
+</html>

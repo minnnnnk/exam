@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바 스크립트</h1>
+	
+	<h2>함수(펑션)</h2>
+</body>
+<script type="text/javascript">
+	var name ="global";	//전역변수
+	var name2; //전역변수
+	
+	
+	//함수정의
+	
+	function checkScope() {
+		name = "local";	//전역변수에 name
+		name2 = "로컬";	//전역변수로 선언
+	}
+	
+	checkScope();		//출력 local
+	console.log(name);	//출력 global
+	console.log(name2);	//출력 global
+</script>
+</html>
