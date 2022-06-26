@@ -31,6 +31,7 @@
 
 <script type="text/javascript">
 	window.onload = function() {
+		
 		var one = document.getElementById("one");
 		var two = document.getElementById("two");
 		var three = document.getElementById("three");
@@ -48,35 +49,57 @@
 		var plus = document.getElementById("plus");
 		var zero = document.getElementById("zero");
 		
+		var display = document.getElementById("display");
+		
+		var left = document.getElementById("left");
+		var right = document.getElementById("right");
+		
+		var first = parseInt(display.value);
+		
+		reset = (display.value = "");
+		
+		
+		
 		zero.onclick = function(){
 			console.log("0");
+			display.value = display.value+("0");
 		}
 		one.onclick = function(){
 			console.log("1");
+			display.value = display.value+("1");
 		}
 		two.onclick = function(){
 			console.log("2");
+			display.value = display.value+("2");
 		}
 		three.onclick = function(){
 			console.log("3");
+			display.value = display.value+("3");
 		}
 		four.onclick = function(){
 			console.log("4");
+			display.value = display.value+("4");
 		}
 		five.onclick = function(){
 			console.log("5");
+			display.value = display.value+("5");
 		}
+		
 		six.onclick = function(){
 			console.log("6");
+			display.value = display.value+("6");
 		}
 		seven.onclick = function(){
 			console.log("7");
+			display.value = display.value+("7");
 		}
 		eight.onclick = function(){
 			console.log("8");
+			display.value = display.value+("8");
 		}
 		nine.onclick = function(){
 			console.log("9");
+			display.value = display.value+("9");
 		}
 		divide.onclick = function(){
 			console.log("/");
@@ -92,11 +115,19 @@
 		}
 		sum.onclick = function(){
 			console.log("=");
+			display.value = sum;
 		}
 		plus.onclick = function(){
 			console.log("+");
+			console.log(display.value);
+			
+			reset();
+			
+			var tw = parseInt(display.value);
+			
 		}
 		
+		display.innerHTML = display.value;
 	}
 </script>
 </html>
