@@ -99,20 +99,26 @@
 		}
 		
 		sum.onclick = function(){
-			if(display.value.split("+")) { //더하기
-				var numArray = display.value.split("+");
-				display.value = parseInt(numArray[0])+parseInt(numArray[1]);
-			}else if(display.value.split("-")){ //빼기
-				var numArray = display.value.split("-");
-				display.value = parseInt(numArray[0])-parseInt(numArray[1]);
-			}else if(display.value.split("x")){ //곱하기
-				var numArray = display.value.split("x");
-				display.value = parseInt(numArray[0])*parseInt(numArray[1]);
-			}else if(display.value.split("/")){ // 나누기
-				var numArray = display.value.split("/");
-				display.value = parseInt(numArray[0])/parseInt(numArray[1]);
+			var numArray;
+			if(display.value.split("+").length === 2) { //더하기
+				var num = display.value.split("+");
+				display.value = parseInt(num[0]) + parseInt(num[1]);
 				
-			}				
+				/* for(var i = 0; i<num.lenght; i++) {
+					summ = summ + parseInt(num[i]);
+				}
+				display.value = summ; */
+			}else if(display.value.split("-").length === 2){ //빼기
+				var num = display.value.split("-");
+				display.value = parseInt(num[0]) - parseInt(num[1]);
+			}else if(display.value.split("x").length === 2){ //곱하기
+				var num = display.value.split("x");
+				display.value = parseInt(num[0]) * parseInt(num[1]);
+			}else if(display.value.split("/").length === 2){ // 나누기
+				var num = display.value.split("/");
+				display.value = parseInt(num[0]) / parseInt(num[1]);
+			}
+				
 		}
 		display.innerHTML = display.value;
 	}
