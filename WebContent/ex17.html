@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript" src="./jquery-1.12.4.js"></script>
+
 </head>
 <body>
 	<h1>자바스크립트</h1>
@@ -18,12 +21,41 @@
 
 	<script type="text/javascript">
 		window.onload = function() {
+			
+			
+			/* //자바스크립트로 이벤트처리
 			var testButton = document.getElementById("btn"); //id=btn DOM->자바스크립트객체화
 			var testArea = document.getElementById("display"); //id=display DOM->자바스크립트객체화
 			testButton.onclick = function() {
 				console.log("버튼클릭");
-				testArea.innerHTML = "이름출력을 어데서하노";
-			};
+				testArea.innerHTML = '<font color="blue">이름출력을 어데서하노</font>';
+			}; */
+			
+			
+			//jqu$ery 이벤트 처리
+			
+			//상상더하기
+			/*
+			var testButton= {
+				id:"btn",
+				tag: "button",
+				type:"button",
+				on: function("",b){}
+			}
+			*/
+			
+			var testButton = $("#btn");
+			var display = $("#display");
+			
+			console.log(testButton);
+			
+			testButton.on("click" , function(){
+				console.log("클릭 jquery");
+				
+				display.html('<font color="blue">김민규</font>');
+			});
+			
+			
 		};
 	</script>
 </html>
